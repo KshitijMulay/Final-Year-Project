@@ -1,0 +1,180 @@
+:root {
+     --primary-blue: #1a3a5c;
+     --secondary-blue: #3c6e9c;
+     --accent-blue: #7cb7e3;
+     --light-blue: #d0e8f2;
+     --text-color: #333;
+     --background-color: #f0f8ff;
+   }
+   
+   body {
+     font-family: 'Arial', sans-serif;
+     background-color: var(--background-color);
+     color: var(--text-color);
+     line-height: 1.6;
+     margin: 0;
+     padding: 0;
+   }
+   
+   .pro {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 2rem;
+   }
+   
+   h1 {
+     color: var(--primary-blue);
+     text-align: center;
+     font-size: 2.5rem;
+     margin-bottom: 2rem;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+   }
+   
+   h3 {
+     color: var(--secondary-blue);
+     text-align: center;
+     font-size: 1.5rem;
+     margin-top: 2rem;
+   }
+   
+   .rsbtn, .uploadfile {
+     display: flex;
+     justify-content: center;
+     gap: 1rem;
+     margin-bottom: 2rem;
+   }
+   
+   button {
+     background-color: var(--secondary-blue);
+     color: white;
+     border: none;
+     padding: 0.75rem 1.5rem;
+     font-size: 1rem;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     border-radius: 5px;
+   }
+   
+   button:hover {
+     background-color: var(--primary-blue);
+   }
+   
+   button:disabled {
+     background-color: var(--light-blue);
+     cursor: not-allowed;
+   }
+   
+   #audioFileInput {
+     display: none;
+   }
+   
+   .uploadfile label {
+     background-color: var(--accent-blue);
+     color: var(--primary-blue);
+     padding: 0.75rem 1.5rem;
+     font-size: 1rem;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     border-radius: 5px;
+   }
+   
+   .uploadfile label:hover {
+     background-color: var(--light-blue);
+   }
+   
+   #progressBar, #accuracyMeter {
+     width: 100%;
+     height: 20px;
+     background-color: var(--light-blue);
+     border-radius: 10px;
+     overflow: hidden;
+     margin-bottom: 1rem;
+   }
+   
+   #progressBar > div, #accuracyMeter > div {
+     height: 100%;
+     background-color: var(--accent-blue);
+     transition: width 0.3s ease;
+   }
+   
+   #visualizer, #spectrogram {
+     width: 100%;
+     height: 200px;
+     background-color: var(--light-blue);
+     margin-bottom: 1rem;
+     border-radius: 5px;
+   }
+   
+   #loading, #results, #improvementSuggestions, #wikipediaPreview, #comparisonResults {
+     background-color: white;
+     padding: 1rem;
+     margin-bottom: 1rem;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+   
+   #loading {
+     text-align: center;
+     font-style: italic;
+     color: var(--secondary-blue);
+   }
+   
+   #timeAlignedResults {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+     margin-bottom: 1rem;
+   }
+   
+   #timeAlignedResults > div {
+     background-color: var(--light-blue);
+     padding: 0.5rem;
+     border-radius: 5px;
+     flex: 1 1 200px;
+   }
+   
+   #historyChart {
+     background-color: white;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     margin-bottom: 1rem;
+   }
+   
+   #feedbackButtons {
+     display: flex;
+     justify-content: center;
+     gap: 1rem;
+     margin-top: 1rem;
+   }
+   
+   @media (max-width: 768px) {
+     .pro {
+       padding: 1rem;
+     }
+   
+     h1 {
+       font-size: 2rem;
+     }
+   
+     .rsbtn, .uploadfile {
+       flex-direction: column;
+     }
+   
+     button, .uploadfile label {
+       width: 100%;
+     }
+   }
+   
+   @media (max-width: 480px) {
+     h1 {
+       font-size: 1.5rem;
+     }
+   
+     h3 {
+       font-size: 1.2rem;
+     }
+   
+     #visualizer, #spectrogram {
+       height: 150px;
+     }
+   }
